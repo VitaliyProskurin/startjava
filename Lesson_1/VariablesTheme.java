@@ -1,6 +1,6 @@
 public class VariablesTheme {   
     public static void main(String[] args) {
-        System.out.println("TASK 1. Вывод характеристик компьютера:\n");
+        System.out.println("TASK 1. Вывод характеристик компьютера:");
         
         String idCpu = "Intel Core i5 10400";
         System.out.println("Процессор: " + idCpu);
@@ -15,7 +15,7 @@ public class VariablesTheme {
         float frequencyCpu = 2.9f;
         double frequencyTurboCpu = 4.3d;
         System.out.println("Частота процессора: " + frequencyCpu + " Ггц," 
-            + " в режиме Turbo: " + frequencyTurboCpu + " Ггц");
+                + " в режиме Turbo: " + frequencyTurboCpu + " Ггц");
 
         short amountRam = 16; 
         System.out.println("Оперативная память: " + amountRam + " Гб");
@@ -23,7 +23,7 @@ public class VariablesTheme {
         short frequencyRam = 2666; 
         String typeRam = "DDR4";
         System.out.println("Тип оперативной памяти: " + typeRam 
-            + ", частота оперативной памяти: " + frequencyRam + " МГц");
+                + ", частота оперативной памяти: " + frequencyRam + " МГц");
 
         short amountStorage = 512;
         System.out.println("Общий объем накопителей SSD: " + amountStorage + " ГБ");
@@ -35,16 +35,16 @@ public class VariablesTheme {
         boolean isLike = false; 
         System.out.println("Нравится компьютер: " + isLike + "\n");
 
-        System.out.println("TASK 2. Расчет стоимости товара со скидкой\n");
+        System.out.println("TASK 2. Расчет стоимости товара со скидкой");
         float costPen = 100;
         float costBook = 200; 
         float costGoods = costPen + costBook;
-        double discountAmount = costGoods * 0.11;
-        double totalCostDiscountGoods = costGoods - discountAmount;
+        float discountAmount = (float) (costGoods * 0.11);
+        float discountPrice = (float) (costGoods - discountAmount);
         
         System.out.println("Общая стоимость товаров без скидки: " + costGoods + " руб.");
         System.out.println("Сумма скидки: " + discountAmount + " руб.");
-        System.out.println("Общая стоимость товаров со скидкой: " + totalCostDiscountGoods + "р\n");
+        System.out.println("Общая стоимость товаров со скидкой: " + discountPrice + " р\n");
 
         System.out.println("TASK 3 Вывод слова JAVA \n");
         System.out.println("   J    a  v     v  a");
@@ -52,53 +52,53 @@ public class VariablesTheme {
         System.out.println("J  J  aaaaa  V V  aaaaa");
         System.out.println(" JJ  a     a  V  a     a\n");
 
-        System.out.println("TASK 4 Вывод min и max значений целых числовых типов\n");
-        byte maximumByte = 127;
-        short maximumShort = 32767;
-        int maximumInt = 2147483647;
-        long maximumLong = 9223372036854775807L;
-        System.out.println("первоначальное значение: " + maximumByte + "\n"
-            + "значение после инкремента на единицу: " + (++maximumByte) + "\n"
-            + "значение после декремента на единицу: " + (--maximumByte) + "\n");
-        System.out.println("первоначальное значение: " + maximumShort + "\n"
-            + "значение после инкремента на единицу: " + (++maximumShort) + "\n"
-            + "значение после декремента на единицу: " + (--maximumShort) + "\n");
-        System.out.println("первоначальное значение: " + maximumInt + "\n"
-            + "значение после инкремента на единицу: " + (++maximumInt) + "\n" 
-            + "значение после декремента на единицу: " + (--maximumInt) + "\n");
-        System.out.println("первоначальное значение: " + maximumLong +"\n"
-            + "значение после инкремента на единицу: " + (++maximumLong) +"\n" 
-            + "значение после декремента на единицу: " + (--maximumLong) + "\n");
+        System.out.println("TASK 4 Вывод min и max значений целых числовых типов");
+        byte maxByte = 127;
+        short maxShort = 32767;
+        int maxInt = 2147483647;
+        long maxLong = 9223372036854775807L;
+        System.out.println("первоначальное значение: " + maxByte + "\n"
+                + "значение после инкремента на единицу: " + (++maxByte) + "\n"
+                + "значение после декремента на единицу: " + (--maxByte) + "\n");
+        System.out.println("первоначальное значение: " + maxShort + "\n"
+                + "значение после инкремента на единицу: " + (++maxShort) + "\n"
+                + "значение после декремента на единицу: " + (--maxShort) + "\n");
+        System.out.println("первоначальное значение: " + maxInt + "\n"
+                + "значение после инкремента на единицу: " + (++maxInt) + "\n" 
+                + "значение после декремента на единицу: " + (--maxInt) + "\n");
+        System.out.println("первоначальное значение: " + maxLong +"\n"
+                + "значение после инкремента на единицу: " + (++maxLong) +"\n" 
+                + "значение после декремента на единицу: " + (--maxLong) + "\n");
 
-        System.out.println("TASK 5 Перестановка значений переменных\n");
-        System.out.println("C помощью третьей переменной:\n");
+        System.out.println("TASK 5 Перестановка значений переменных");
+        System.out.println("C помощью третьей переменной:");
         int a = 2;
         int b = 5;
         int c = a;
         System.out.println("Исходное значение переменной a = " + a 
-            + ", Исходное значение переменной b = " + b);
+                + ", Исходное значение переменной b = " + b);
         a = b;
         b = c;
         System.out.println("Значение переменной a после перестановки: " + a 
-            + ", Значение переменной b после перестановки: " + b + "\n");
+                + ", Значение переменной b после перестановки: " + b + "\n");
         
-        System.out.println("С помощью арифметических операций:\n");
+        System.out.println("С помощью арифметических операций:");
         System.out.println("Исходное значение переменной a = " + a 
-            + ", Исходное значение переменной b = " + b);
+                + ", Исходное значение переменной b = " + b);
         a += b;
         b = a - b;
         a -= b;
         System.out.println("Значение переменной a после арифметических операций: " + a 
-            + ", Значение переменной b после арифметических операций: " + b + "\n");
+                + ", Значение переменной b после арифметических операций: " + b + "\n");
         
-        System.out.println("С помощью побитовой операции ^ \n");
+        System.out.println("С помощью побитовой операции ^:");
         System.out.println("Исходное значение переменной a = " + a 
-            + ", Исходное значение переменной b = " + b);
+                + ", Исходное значение переменной b = " + b);
         a = a ^ b ^ (b = a);
         System.out.println("Значение переменной a после побитовой операции ^: " + a 
-            + ", Значение переменной b побитовой операции ^: " + b + "\n");
+                + ", Значение переменной b побитовой операции ^: " + b + "\n");
 
-        System.out.println("TASK 6 Вывод символов и их кодов \n");
+        System.out.println("TASK 6 Вывод символов и их кодов");
         //проинициализируйте переменные типа char символами (а не их кодами), найдя их в 
         //ASCII-таблице по кодам:
         System.out.printf("Код\tСимвол\n");
@@ -111,7 +111,7 @@ public class VariablesTheme {
         char verticalBar = '|';
         System.out.printf("%d\t%c\n", ((int) verticalBar), verticalBar);
         char tilde = '~';
-        System.out.printf("%d\t%c\n\n", ((int)tilde), tilde);
+        System.out.printf("%d\t%c\n\n", ((int) tilde), tilde);
 
         System.out.println("TASK 7 Вывод в консоль ASCII-арт Дюка" + "\n");
         char slash = '/';
@@ -120,15 +120,15 @@ public class VariablesTheme {
         char leftParenthesis = '(';
         char rightParenthesis = ')';
         
-        System.out.printf("    %c%c    \n", slash, backslash);
-        System.out.printf("   %c  %c   \n", slash, backslash);
-        System.out.printf("  %c%c%c %c%c  \n", slash, underscore, leftParenthesis,
-            rightParenthesis, backslash);
-        System.out.printf(" %c      %c \n", slash, backslash);
-        System.out.printf("%c%c%c%c%c%c%c%c%c%c" + "\n\n", slash, underscore, underscore,
-            underscore, underscore, slash, backslash, underscore, underscore, backslash);
+        System.out.printf("    %c%c\n", slash, backslash);
+        System.out.printf("   %c  %c\n", slash, backslash);
+        System.out.printf("  %c%c%c %c%c\n", slash, underscore, leftParenthesis,
+                rightParenthesis, backslash);
+        System.out.printf(" %c      %c\n", slash, backslash);
+        System.out.printf("%c%c%c%c%c%c%c%c%c%c\n\n", slash, underscore, underscore,
+                underscore, underscore, slash, backslash, underscore, underscore, backslash);
 
-        System.out.println("TASK 8 Вывод количества сотен, десятков и единиц числа" + "\n");
+        System.out.println("TASK 8 Вывод количества сотен, десятков и единиц числа");
         int number = 123;
         int hundreds = (number / 100) % 10;
         int tens = (number / 10) % 10;
@@ -140,7 +140,7 @@ public class VariablesTheme {
         System.out.println("Сумма его цифр = " + (hundreds + tens + ones));
         System.out.println("Произведение = " + (hundreds * tens * ones) + "\n");
 
-        System.out.println("TASK 9 Вывод времени\n");
+        System.out.println("TASK 9 Вывод времени");
         int time = 86399;        
         System.out.println((time / 3600) + ":" + (time / 60 % 60) + ":" + (time % 60));
     }   

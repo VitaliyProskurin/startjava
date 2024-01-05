@@ -33,26 +33,26 @@ public class VariablesTheme {
         System.out.println("Стоимость: " + costPc + unitMonetary);
 
         boolean isLike = false; 
-        System.out.println("Нравится компьютер: " + isLike + "\n");
+        System.out.println("Нравится компьютер: " + isLike);
 
-        System.out.println("TASK 2. Расчет стоимости товара со скидкой");
+        System.out.println("\nTASK 2. Расчет стоимости товара со скидкой");
         float costPen = 100;
         float costBook = 200; 
         float costGoods = costPen + costBook;
-        float discountAmount = (float) (costGoods * 0.11);
-        float discountPrice = (float) (costGoods - discountAmount);
+        float discountAmount = costGoods * 0.11f;
+        float discountPrice = costGoods - discountAmount;
         
         System.out.println("Общая стоимость товаров без скидки: " + costGoods + " руб.");
         System.out.println("Сумма скидки: " + discountAmount + " руб.");
-        System.out.println("Общая стоимость товаров со скидкой: " + discountPrice + " р\n");
+        System.out.println("Общая стоимость товаров со скидкой: " + discountPrice + " р");
 
-        System.out.println("TASK 3 Вывод слова JAVA \n");
+        System.out.println("\nTASK 3 Вывод слова JAVA\n");
         System.out.println("   J    a  v     v  a");
         System.out.println("   J   a a  v   v  a a");
         System.out.println("J  J  aaaaa  V V  aaaaa");
-        System.out.println(" JJ  a     a  V  a     a\n");
+        System.out.println(" JJ  a     a  V  a     a");
 
-        System.out.println("TASK 4 Вывод min и max значений целых числовых типов");
+        System.out.println("\nTASK 4 Вывод min и max значений целых числовых типов");
         byte maxByte = 127;
         short maxShort = 32767;
         int maxInt = 2147483647;
@@ -80,27 +80,24 @@ public class VariablesTheme {
         a = b;
         b = c;
         System.out.println("Значение переменной a после перестановки: " + a 
-                + ", Значение переменной b после перестановки: " + b + "\n");
-        
-        System.out.println("С помощью арифметических операций:");
+                + ", Значение переменной b после перестановки: " + b);
+        System.out.println("\nС помощью арифметических операций:");
         System.out.println("Исходное значение переменной a = " + a 
                 + ", Исходное значение переменной b = " + b);
         a += b;
         b = a - b;
         a -= b;
         System.out.println("Значение переменной a после арифметических операций: " + a 
-                + ", Значение переменной b после арифметических операций: " + b + "\n");
+                + ", Значение переменной b после арифметических операций: " + b);
         
-        System.out.println("С помощью побитовой операции ^:");
+        System.out.println("\nС помощью побитовой операции ^:");
         System.out.println("Исходное значение переменной a = " + a 
                 + ", Исходное значение переменной b = " + b);
         a = a ^ b ^ (b = a);
         System.out.println("Значение переменной a после побитовой операции ^: " + a 
-                + ", Значение переменной b побитовой операции ^: " + b + "\n");
+                + ", Значение переменной b побитовой операции ^: " + b);
 
-        System.out.println("TASK 6 Вывод символов и их кодов");
-        //проинициализируйте переменные типа char символами (а не их кодами), найдя их в 
-        //ASCII-таблице по кодам:
+        System.out.println("\nTASK 6 Вывод символов и их кодов");
         System.out.printf("Код\tСимвол\n");
         char dollar = '$';
         System.out.printf("%d\t%c\n", ((int) dollar), dollar);
@@ -111,9 +108,9 @@ public class VariablesTheme {
         char verticalBar = '|';
         System.out.printf("%d\t%c\n", ((int) verticalBar), verticalBar);
         char tilde = '~';
-        System.out.printf("%d\t%c\n\n", ((int) tilde), tilde);
+        System.out.printf("%d\t%c\n", ((int) tilde), tilde);
 
-        System.out.println("TASK 7 Вывод в консоль ASCII-арт Дюка" + "\n");
+        System.out.println("\nTASK 7 Вывод в консоль ASCII-арт Дюка\n");
         char slash = '/';
         char backslash = '\\';
         char underscore = '_';
@@ -125,10 +122,10 @@ public class VariablesTheme {
         System.out.printf("  %c%c%c %c%c\n", slash, underscore, leftParenthesis,
                 rightParenthesis, backslash);
         System.out.printf(" %c      %c\n", slash, backslash);
-        System.out.printf("%c%c%c%c%c%c%c%c%c%c\n\n", slash, underscore, underscore,
+        System.out.printf("%c%c%c%c%c%c%c%c%c%c\n", slash, underscore, underscore,
                 underscore, underscore, slash, backslash, underscore, underscore, backslash);
 
-        System.out.println("TASK 8 Вывод количества сотен, десятков и единиц числа");
+        System.out.println("\nTASK 8 Вывод количества сотен, десятков и единиц числа");
         int number = 123;
         int hundreds = (number / 100) % 10;
         int tens = (number / 10) % 10;
@@ -138,9 +135,9 @@ public class VariablesTheme {
         System.out.println("десятков - " + tens);
         System.out.println("единиц - " + ones);
         System.out.println("Сумма его цифр = " + (hundreds + tens + ones));
-        System.out.println("Произведение = " + (hundreds * tens * ones) + "\n");
+        System.out.println("Произведение = " + (hundreds * tens * ones));
 
-        System.out.println("TASK 9 Вывод времени");
+        System.out.println("\nTASK 9 Вывод времени");
         int time = 86399;        
         System.out.println((time / 3600) + ":" + (time / 60 % 60) + ":" + (time % 60));
     }   

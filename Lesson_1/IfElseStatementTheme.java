@@ -44,20 +44,21 @@ public class IfElseStatementTheme {
 
         System.out.println("\nTASK 3 Проверка числа");
         int digit = 11;
-        String parityOddNumber = "нечетным";
-        String positiveNegativeNumber = " отрицательным, ";
         if (digit == 0) {
-            positiveNegativeNumber = " нулем";
-            parityOddNumber = "";
-        } else if (digit > 0 && digit % 2 == 0) {
-            parityOddNumber = "чётным";
-            positiveNegativeNumber = " положительным, ";
-        } else if (digit > 0) {
-            positiveNegativeNumber = " положительным, ";
-        } else if (digit % 2 == 0) {
-            parityOddNumber = "чётным";
+            System.out.println("Число является " + digit);
+        } else {
+            System.out.println(digit + " является ");
+            if (digit > 0) {
+                System.out.print("положительным, ");
+            } else {
+                System.out.print("отрицательным, ");
+            }
+            if (digit % 2 == 0) {
+                System.out.print("четным");
+            } else {
+                System.out.print("нечетным");
+            }
         }
-        System.out.println(digit + " является" + positiveNegativeNumber + parityOddNumber);
 
         System.out.println("\nTASK 4 Поиск одинаковых цифр в числах");
         int number1 = 123;
@@ -68,24 +69,24 @@ public class IfElseStatementTheme {
         int tensNumber2 = (number2 / 10) % 10;
         int onesNumber1 = number1 % 10;
         int onesNumber2 = number2 % 10;
-        boolean isEqualHundredsNumbers = hundredsNumber1 == hundredsNumber2;
-        boolean isEqualTensNumbers = tensNumber1 == tensNumber2;
-        boolean isEqualOnesNumbers = onesNumber1 == onesNumber2;
-        if (isEqualHundredsNumbers || isEqualTensNumbers || isEqualOnesNumbers) {
-            if (isEqualHundredsNumbers){
+        boolean isEqualHundredsNumber = hundredsNumber1 == hundredsNumber2;
+        boolean isEqualTensNumber = tensNumber1 == tensNumber2;
+        boolean isEqualOnesNumber = onesNumber1 == onesNumber2;
+        if (isEqualHundredsNumber || isEqualTensNumber || isEqualOnesNumber) {
+            if (isEqualHundredsNumber) {
                 System.out.println("Исходные числа " + number1 + ", " + number2 
-                + "\nодинаковые в них цифры " + hundredsNumber1 + "\nномер разряда: 1");
+                    + "\nодинаковые в них цифры " + hundredsNumber1 + "\nномер разряда: 1");
             }
-            if (isEqualTensNumbers) {
+            if (isEqualTensNumber) {
                 System.out.println("Исходные числа " + number1 + ", " + number2 
-                + "\nодинаковые в них цифры " + tensNumber1 + "\nномер разряда: 2");
+                    + "\nодинаковые в них цифры " + tensNumber1 + "\nномер разряда: 2");
             }
-            if (isEqualOnesNumbers) {
+            if (isEqualOnesNumber) {
                 System.out.println("Исходные числа " + number1 + ", " + number2 
-                + "\nодинаковые в них цифры " + onesNumber1 + "\nномер разряда: 3");
+                    + "\nодинаковые в них цифры " + onesNumber1 + "\nномер разряда: 3");
             }
         } else {
-            System.out.println("равных чисел нет");
+            System.out.println("Равных чисел нет");
         }
         
 
@@ -104,15 +105,13 @@ public class IfElseStatementTheme {
         System.out.println("\nTASK 6 Подсчет суммы вклада и начисленных банком %");
         int depositAmount = 301000;
         double depositPercent = 0.05;
-        double depositSum = 0; 
-        double percentSum = 0;
         if (depositAmount >= 100000 && depositAmount <= 300000) {
             depositPercent = 0.07;
         } else {
             depositPercent = 0.1;
         }
-        percentSum = depositAmount * depositPercent; 
-        depositSum += percentSum;        
+        double percentSum = depositAmount * depositPercent;
+        double depositSum = depositAmount + percentSum;
         System.out.println("Сумма вклада: " + depositAmount + " руб.\n" 
                 + "Сумма начисленного %: " + percentSum + " руб.\n" 
                 + "Итоговая сумма: " + depositSum + " руб.");
@@ -146,12 +145,10 @@ public class IfElseStatementTheme {
         int roomMonthRent = 2000;
         int costProduction = 8000;
         int profitYear = (productMonthSales - (roomMonthRent + costProduction)) * 12;
-        if (profitYear < 0) {
-            System.out.println("Прибыль за год: " + profitYear + " руб.");
-        } else if (profitYear > 0) {
+        if (profitYear >= 0) {
             System.out.println("Прибыль за год: +" + profitYear + " руб.");
         } else {
-            System.out.println("Прибыль за год 0 руб.");
+            System.out.println("Прибыль за год: " + profitYear + " руб.");
         }
     }
 }

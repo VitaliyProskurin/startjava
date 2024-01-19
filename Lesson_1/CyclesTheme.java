@@ -56,27 +56,27 @@ public class CyclesTheme {
         beginNumber = 1;
         endNumber = 30;
         counter = 0;
-        for (int i = beginNumber; i < endNumber; i+=2) {
+        for (int i = beginNumber; i < endNumber; i += 2) {
             System.out.printf("%4d", i);
             counter++;
             if (counter % 5 == 0) {
-                    System.out.println();
+                System.out.println();
             }
-        } while (counter % 5 != 0) {
-            System.out.printf("%4s", "0");
+        }
+        while (counter % 5 != 0) {
+            System.out.printf("%4d", 0);
             counter++;
         }
 
         System.out.println("\n\nTASK 5 Проверка количества двоек числа на четность/нечетность");
-        number = 3242592;
+        number = 3222592;
         int copyNumber = number;
         int countTwos = 0;
         while (copyNumber > 0) {
-            int digit = copyNumber % 10;
-            if (digit == 2) {
+            if (copyNumber % 10 == 2) {
                 countTwos++;
             }
-            copyNumber = copyNumber / 10;
+            copyNumber /= 10;
         }
         if (countTwos % 2 == 0) {
             System.out.println("В " + number + " четное количество двоек - " + countTwos);
@@ -160,48 +160,36 @@ public class CyclesTheme {
         }
 
         System.out.println("\n\nTASK 9 Проверка, является ли число счастливым");
-        number = 123456;
-        reverseNumber = 0;
+        number = 123123;
         copyNumber = number;
         counter = 0;
-        while (copyNumber > 0) {
-            reverseNumber = copyNumber % 10 + reverseNumber * 10;
-            copyNumber /= 10;
-            counter++;
-        }
-        int halfCount = counter / 2;
-        int sumNumbers1 = 0;
-        int sumNumbers2 = 0;
-        while (counter != 0) {
-            if (counter > halfCount) {
-                copyNumber = reverseNumber % 10;
-                reverseNumber /= 10;
-                counter--;
-                sumNumbers1 += copyNumber;
+        int sumLeftHalf = 0;
+        int sumRightHalf = 0;
+        System.out.print("Число " + number);
+        for (int i = 0; i < 6; i++) {
+            int digit = number % 10;
+            if (i < 3) {
+                sumRightHalf += digit;
             } else {
-                copyNumber = reverseNumber % 10;
-                reverseNumber /= 10;
-                counter--;
-                sumNumbers2 += copyNumber;
+                sumLeftHalf += digit;
             }
+            number /= 10;
         }
-        if (sumNumbers1 == sumNumbers2) {
-            System.out.println("Число " + number + " является счастливым");
-            System.out.println("Сумма цифр ABC = " + sumNumbers1 
-                    + ", а сумма цифр DEF = " + sumNumbers2);
+        if (sumLeftHalf == sumRightHalf) {
+            System.out.print(" является счастливым");
         } else {
-            System.out.println("Число " + number + " не является счастливым");
-            System.out.println("Сумма цифр ABC = " + sumNumbers1
-                    + ", а сумма цифр DEF = " + sumNumbers2);
+            System.out.print(" не является счастливым");
         }
-
+        System.out.println("\nСумма цифр ABC = " + sumLeftHalf 
+                    + ", а сумма цифр DEF = " + sumRightHalf);
+                    
         System.out.println("\n\nTASK 10 Отображение таблицы умножения Пифагора");
         for (int i = 1; i <= 9; i++) {
             if (i == 1) {
                 System.out.printf("%4s|", " ");
             } else {
                 System.out.printf("%4d", i);
-            }            
+            }
         }
         System.out.println("\n--------------------------------------");
         for (int i = 2; i <= 9; i++) {

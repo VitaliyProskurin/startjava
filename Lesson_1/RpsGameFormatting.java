@@ -1,7 +1,7 @@
 import java.util.Random;
 
 public class RpsGameFormatting {
-// Игра Камень-Ножницы-Бумага
+        // Игра Камень-Ножницы-Бумага
     public static void main(String[] args) throws InterruptedException {
         String rock = "Камень";
         String scissors = "Ножницы";
@@ -22,10 +22,11 @@ public class RpsGameFormatting {
             Thread.sleep(100);
             System.out.print(scissors + "\r");
             Thread.sleep(100);
-            System.out.print (paper + "\r");
+            System.out.print(paper + "\r");
             Thread.sleep(100);
         }
         System.out.println(sign1);
+
             // Ход второго игрока
         String name2 = "WALLE";
         int position2 = r.nextInt(100);
@@ -41,7 +42,7 @@ public class RpsGameFormatting {
             Thread.sleep(100);
             System.out.print(scissors + "\r");
             Thread.sleep(100);
-            System.out.print (paper + "\r");
+            System.out.print(paper + "\r");
             Thread.sleep(100);
         }
         System.out.println (sign2);

@@ -1,4 +1,4 @@
-public class Person  {
+public class Person {
 
     String gender = "мужской";
     String name = "Виталий";
@@ -10,7 +10,7 @@ public class Person  {
         System.out.println("идет");
     }
 
-    void seat() {
+    void sit() {
         System.out.println("сидит");
     }
 

@@ -10,7 +10,7 @@ public class Wolf {
         System.out.println("Идет");
     }
 
-    void seat() {
+    void sit() {
         System.out.println("Сидит");
     }
 

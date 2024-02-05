@@ -15,7 +15,7 @@ public class WolfTest {
         System.out.println("Окрас = " + wolfOne.color);
         
         wolfOne.move();
-        wolfOne.seat();
+        wolfOne.sit();
         wolfOne.run();
         wolfOne.howl();
         wolfOne.hunt();

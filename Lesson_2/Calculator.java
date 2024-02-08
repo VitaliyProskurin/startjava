@@ -5,32 +5,20 @@ public class Calculator {
     private double a;
     private double b;
 
-    public double getResult() {
-        return result;
+    public void setSign(char sign) {
+        this.sign = sign;
     }
 
-    public double getA() {
-        return a;
+    public double getResult() {
+        return result;
     }
 
     public void setA(Double a) {
         this.a = a;
     }
 
-    public double getB() {
-        return b;
-    }
-
     public void setB(Double b) {
         this.b = b;
-    }
-
-    public char getSign() {
-        return sign;
-    }
-
-    public void setSign(char sign) {
-        this.sign = sign;
     }
  
     public void calculation() {

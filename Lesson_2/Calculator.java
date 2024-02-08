@@ -9,76 +9,55 @@ public class Calculator {
         return result;
     }
 
-    public double getInputA() {
+    public double getA() {
         return a;
     }
 
-    public void setInputA(Double a) {
+    public void setA(Double a) {
         this.a = a;
     }
 
-    public double getInputB() {
+    public double getB() {
         return b;
     }
 
-    public void setInputB(Double b) {
+    public void setB(Double b) {
         this.b = b;
     }
 
-    public char getInputSign() {
+    public char getSign() {
         return sign;
     }
 
-    public void setInputSign(char sign) {
-        switch(sign) {
-        case '+' :
-            this.sign = sign;
-            break;
-        case '-' :
-            this.sign = sign;
-            break;
-        case '*' :
-            this.sign = sign;
-            break;
-        case '/' :
-            this.sign = sign;
-            break;
-        case '^' :
-            this.sign = sign;
-            break;
-        case '%' :
-            this.sign = sign;
-            break;
-        default:
-            System.out.println("Не правильный оператор");
-        }
+    public void setSign(char sign) {
+        this.sign = sign;
     }
-
-    public void calculation(double a, char sign, double b) {
+ 
+    public void calculation() {
         switch(sign) {
-        case '+' :
-            result = a + b;
-            break;
-        case '-' :
-            result = a - b;
-            break;
-        case '*' :
-            result = a * b;
-            break;
-        case '/' :
-            result = a / b;
-            break;
-        case '^' :
-            result = a;
-            for (int i = 1; i < b; i++) {
-            result *= a;
-            }
-            break;
-        case '%' :
-            result = a % b;
-            break;
-        default:
-            System.out.println("Не выбран оператор");
+            case '+' :
+                result = a + b;
+                break;
+            case '-' :
+                result = a - b;
+                break;
+            case '*' :
+                result = a * b;
+                break;
+            case '/' :
+                result = a / b;
+                break;
+            case '^' :
+                result = 1;
+                for (int i = 1; i <= b; i++) {
+                    result *= a;
+                }
+                break;
+            case '%' :
+                result = a % b;
+                break;
+            default:
+                System.out.println("Не выбран оператор");
         }
     }
 }

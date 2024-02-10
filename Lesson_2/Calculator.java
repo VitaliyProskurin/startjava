@@ -1,27 +1,27 @@
 public class Calculator {
 
     private char sign;
-    private double result;
-    private double a;
-    private double b;
+    private int result;
+    private int a;
+    private int b;
 
     public void setSign(char sign) {
         this.sign = sign;
     }
 
-    public double getResult() {
+    public int getResult() {
         return result;
     }
 
-    public void setA(Double a) {
+    public void setA(int a) {
         this.a = a;
     }
 
-    public void setB(Double b) {
+    public void setB(int b) {
         this.b = b;
     }
  
-    public void calculation() {
+    public void calculate() {
         switch(sign) {
             case '+' :
                 result = a + b;

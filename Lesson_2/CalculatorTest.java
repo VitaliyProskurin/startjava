@@ -8,13 +8,13 @@ public class CalculatorTest {
         String choice;
         do {
             System.out.println("Введите первое число: ");
-            calculator.setA(scan.nextDouble());
+            calculator.setA(scan.nextInt());
             System.out.println("Введите знак математической операции: + - / * ^ %");
             calculator.setSign(scan.next().charAt(0));
             System.out.println("Введите второе число: ");
-            calculator.setB(scan.nextDouble());
+            calculator.setB(scan.nextInt());
 
-            calculator.calculation();
+            calculator.calculate();
             System.out.println("Результат: " + calculator.getResult());
             scan.nextLine();
 
@@ -22,7 +22,6 @@ public class CalculatorTest {
                 System.out.println("\nХотите продолжить вычисления? [yes/no]: ");
                 choice = scan.nextLine();
             } while (!choice.equals("no") && !choice.equals("yes"));
-            
         } while (choice.equals("yes"));
     }
 }

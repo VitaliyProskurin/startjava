@@ -1,4 +1,3 @@
-
 public class JaegerTest {
     public static void main(String[] args) {
         Jaeger jaegerOne = new Jaeger();
@@ -18,10 +17,10 @@ public class JaegerTest {
 
 
         Jaeger jaegerTwo = new Jaeger("Guardian Bravo", "Mark-6", "Japan", 73.21f, 
-            2.18f, 35, 70, 60);
+                2.18f, 35, 70, 60);
         jaegerTwo.displayInfo();
         jaegerTwo.drift();
         jaegerTwo.useVortexCannon();
-        jaegerTwo.useCoreSalvoCharges();        
+        jaegerTwo.useCoreSalvoCharges();
     }
 }

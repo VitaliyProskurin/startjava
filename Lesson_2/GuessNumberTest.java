@@ -10,11 +10,10 @@ public class GuessNumberTest {
         Player player1 = new Player(scan.nextLine());
         System.out.println("Введите имя второго игрока: ");
         Player player2 = new Player(scan.nextLine());
-        GuessNumber GuessNumbers = new GuessNumber(player1, player2);
+        GuessNumber game = new GuessNumber(player1, player2);
         
         do {
-            GuessNumbers.play();
-            
+            game.play();
             do {
                 System.out.println("\nХотите заново начать игру? [yes/no]: ");
                 choice = scan.nextLine();

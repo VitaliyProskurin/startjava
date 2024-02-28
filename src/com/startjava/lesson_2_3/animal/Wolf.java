@@ -1,3 +1,5 @@
+package com.startjava.lesson_2_3.animal;
+
 public class Wolf {
 
     private String gender;
@@ -8,16 +10,16 @@ public class Wolf {
 
     public String getGender() {
         return gender;
-
     }
+
     public void setGender(String gender) {
         this.gender = gender;
     }
 
     public String getNickname() {
         return nickname;
-
     }
+    
     public void setNickname(String nickname) {
         this.nickname = nickname;
     }

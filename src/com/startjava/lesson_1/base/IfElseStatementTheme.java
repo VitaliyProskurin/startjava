@@ -1,4 +1,6 @@
-public class IfElseStatementTheme {   
+package com.startjava.lesson_1.base;
+
+public class IfElseStatementTheme {
     public static void main(String[] args) {
         System.out.println("TASK 1 Перевод псевдокода на язык Java (это название задачи)");
         boolean isMale = true;

@@ -1,4 +1,6 @@
-public class VariableNamesTheme {   
+package com.startjava.lesson_1.base;
+
+public class VariableNamesTheme {
     public static void main(String[] args) {
         System.out.println("Именование переменных\n");
         System.out.println("Task 1. Разные переменные:");
